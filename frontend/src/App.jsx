@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
@@ -11,7 +11,22 @@ import NotFound from './pages/NotFound';
 import Sidebar from './components/Layout/Sidebar';
 
 const App = () => {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const storedUser = localStorage.getItem('user');
+    if (token && storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser);
+      } catch (error) {
+        // Invalid user data, clear storage
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
+    }
+  }, []);
 
   const login = (token, userData) => {
     localStorage.setItem('token', token);
@@ -30,7 +45,7 @@ const App = () => {
       <div className="min-h-screen bg-[#002530]">
         {user ? (
           <div className="flex h-screen">
-            <Sidebar />
+            <Sidebar logout={logout} />
             <div className="flex-1 overflow-hidden">
               <div className="h-full overflow-y-auto px-8 py-8">
                 <Routes>

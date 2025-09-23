@@ -21,11 +21,11 @@ const LoginForm = ({ login }) => {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <h2 className="text-3xl font-bold text-black mb-8">Login</h2>
+      <h2 className="text-3xl font-bold text-white mb-8">Login</h2>
       {error && <p className="text-red-500 mb-4">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block text-black text-sm font-medium mb-2" htmlFor="email">
+          <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="email">
             Email
           </label>
           <input
@@ -39,7 +39,7 @@ const LoginForm = ({ login }) => {
           />
         </div>
         <div>
-          <label className="block text-black text-sm font-medium mb-2" htmlFor="password">
+          <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="password">
             Password
           </label>
           <input
@@ -53,7 +53,7 @@ const LoginForm = ({ login }) => {
           />
         </div>
         <button type="submit" className="w-full bg-primary text-black font-bold py-3 rounded-lg hover:bg-primary/80 transition-colors">Login</button>
-        <p className="text-center text-gray-600 dark:text-gray-400 mt-4">
+        <p className="text-center text-gray-400 mt-4">
           Don't have an account? <Link to="/signup" className="text-primary hover:underline">Sign up</Link>
         </p>
       </form>

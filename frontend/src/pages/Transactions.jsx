@@ -4,8 +4,6 @@ import Modal from '../components/common/Modal';
 import TransactionForm from '../components/Transactions/TransactionForm';
 import TransactionList from '../components/Transactions/TransactionList';
 import { formatCurrency } from '../utils/formatCurrency';
-import Navbar from '../components/Layout/Navbar';
-import Footer from '../components/Layout/Footer';
 
 const Transactions = ({ user, logout }) => {
   const [transactions, setTransactions] = useState([]);

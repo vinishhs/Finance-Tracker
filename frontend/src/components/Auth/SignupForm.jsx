@@ -21,48 +21,54 @@ const SignupForm = ({ login }) => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background-light dark:bg-background-dark">
-      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-6">Sign Up</h2>
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name</label>
+    <div className="w-full max-w-md mx-auto">
+      <h2 className="text-3xl font-bold text-white mb-8">Sign Up</h2>
+      {error && <p className="text-red-500 mb-4">{error}</p>}
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="name">
+            Name
+          </label>
           <input
             type="text"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 border border-gray-200 rounded-lg bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="Enter your name"
             required
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email</label>
+        <div>
+          <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="email">
+            Email
+          </label>
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 border border-gray-200 rounded-lg bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="Enter your email"
             required
           />
         </div>
-        <div className="mb-6">
-          <label htmlFor="password" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Password</label>
+        <div>
+          <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="password">
+            Password
+          </label>
           <input
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 border border-gray-200 rounded-lg bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="Enter your password"
             required
           />
         </div>
         <button type="submit" className="w-full bg-primary text-black font-bold py-3 rounded-lg hover:bg-primary/80 transition-colors">Sign Up</button>
-        <p className="text-center text-gray-600 dark:text-gray-400 mt-4">
+        <p className="text-center text-gray-400 mt-4">
           Already have an account? <Link to="/login" className="text-primary hover:underline">Login</Link>
         </p>
       </form>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = ({ logout }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   
   return (
     <aside className="w-64 bg-surface-dark flex flex-col min-h-screen">
@@ -92,6 +93,20 @@ const Sidebar = () => {
           </li>
         </ul>
       </nav>
+      <div className="p-4 border-t border-white/10">
+        <button
+          onClick={() => {
+            logout();
+            navigate('/login');
+          }}
+          className="w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-white/5 transition-colors"
+        >
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span>Logout</span>
+        </button>
+      </div>
     </aside>
   );
 };
