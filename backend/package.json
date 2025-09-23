@@ -1,0 +1,25 @@
+{
+  "name": "finance-tracker-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.13.8"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.4",
+    "nodemon": "^2.0.22"
+  },
+  "description": "This is the backend for the Finance Tracker application built with Node.js and Express. It handles authentication, transaction management, budget tracking, and report generation.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

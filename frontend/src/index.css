@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-light: #ffffff;
+  --background-dark: #001219;
+  --surface-dark: #002530;
+  --primary: #00DC82;
+  --text-light: #E5E7EB;
+  --text-dark: #1F2937;
+  --border-dark: rgba(0, 220, 130, 0.1);
+}
+
+.dark {
+  --background-light: #001219;
+  --background-dark: #001219;
+  --surface-dark: #002530;
+  --primary: #00DC82;
+  --text-light: #E5E7EB;
+  --text-dark: #1F2937;
+  --border-dark: rgba(0, 220, 130, 0.1);
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
