@@ -9,7 +9,7 @@ const Settings = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold text-black">Settings</h2>
+        <h2 className="text-3xl font-bold text-white">Settings</h2>
       </div>
 
       <div className="grid grid-cols-3 gap-8">

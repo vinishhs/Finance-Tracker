@@ -25,7 +25,7 @@ const BudgetForm = ({ onSuccess }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 mb-6">
-      <h3 className="text-lg font-bold text-black dark:text-white">Add New Budget</h3>
+      <h3 className="text-lg font-bold text-white">Add New Budget</h3>
       {error && <p className="text-red-500">{error}</p>}
       <input
         value={category}

@@ -32,13 +32,13 @@ const Reports = ({ user, logout }) => {
   return (
     <>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Reports</h1>
+        <h1 className="text-3xl font-bold text-white">Reports</h1>
       </div>
       <div className="flex items-center gap-4">
         <select
           value={period}
           onChange={(e) => setPeriod(e.target.value)}
-          className="bg-surface-dark text-gray-300 text-sm rounded-lg px-4 py-2 border border-white/10 focus:outline-none focus:border-primary"
+          className="bg-white text-black font-medium text-sm rounded-lg px-4 py-2 border border-white/10 focus:outline-none focus:border-primary"
         >
           <option>Last 30 Days</option>
           <option>Last 90 Days</option>

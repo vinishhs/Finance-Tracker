@@ -56,7 +56,7 @@ const Transactions = ({ user, logout }) => {
   return (
     <>
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Transactions</h2>
+        <h2 className="text-3xl font-bold text-white">Transactions</h2>
         <button onClick={() => setIsModalOpen(true)} className="bg-primary text-white font-semibold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity">
           New Transaction
         </button>
