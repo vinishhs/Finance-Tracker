@@ -7,6 +7,7 @@ import Reports from './pages/Reports';
 import Settings from './pages/Settings';
 import LoginForm from './components/Auth/LoginForm';
 import SignupForm from './components/Auth/SignupForm';
+import VerifyEmail from './pages/VerifyEmail'; // ✅ NEW
 import NotFound from './pages/NotFound';
 import Sidebar from './components/Layout/Sidebar';
 
@@ -82,7 +83,8 @@ const App = () => {
             <main className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
               <Routes>
                 <Route path="/login" element={<LoginForm login={login} />} />
-                <Route path="/signup" element={<SignupForm login={login} />} />
+                <Route path="/signup" element={<SignupForm />} />
+                <Route path="/verify-email" element={<VerifyEmail login={login} />} /> {/* ✅ NEW */}
                 <Route path="*" element={<Navigate to="/login" />} />
               </Routes>
             </main>

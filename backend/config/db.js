@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
+    mongoose.set('strictQuery', false);
     const mongoUri = process.env.MONGO_URI;
 
     if (!mongoUri) {
